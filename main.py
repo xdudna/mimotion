@@ -63,7 +63,7 @@ def getWeather():
 # 获取北京时间确定随机步数&启动主函数
 def getBeijinTime():
     global K, type
-    K = 1.0
+    K = 0.65
     type = ""
     hea = {'User-Agent': 'Mozilla/5.0'}
     url = r'https://apps.game.qq.com/CommArticle/app/reg/gdate.php'
@@ -182,8 +182,6 @@ def main(_user, _passwd, min_1, max_1):
     user = str(_user)
     password = str(_passwd)
 
-    min_1 = 15800
-    max_1 = 17200
     step = str(random.randint(min_1, max_1))
     print("已设置为随机步数(" + str(min_1) + "~" + str(max_1) + ")")
     if user == '' or password == '':
